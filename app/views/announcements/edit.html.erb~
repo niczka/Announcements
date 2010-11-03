@@ -1,0 +1,6 @@
+<h1>Edycja ogłoszenia</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Pokaż', @announcement %> |
+<%= link_to 'Wstecz', announcements_path %>
