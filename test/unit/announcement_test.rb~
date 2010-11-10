@@ -8,12 +8,12 @@ class AnnouncementTest < ActiveSupport::TestCase
   
   #Example tests
   test "should not save Announcement without an author name" do
-    ann = Announcement.new(:content => 'Content...', :title => 'Tytul')
+    ann = Announcement.new(:content => 'Content...', :title => 'Tytuł')
     assert !ann.save, "Saved the announcement without an author name"
   end
 
   test "should not save Announcement without content" do
-    ann2 = Announcement.new(:author => 'Anna', :title => 'Tytul')
+    ann2 = Announcement.new(:author => 'Anna', :title => 'Tytuł')
     assert !ann2.save, "Saved the announcement without a content"
   end
 end

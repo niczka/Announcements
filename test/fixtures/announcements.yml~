@@ -9,8 +9,3 @@ two:
   author: MyString
   title: MyString
   content: MyText
-
-three:
-  author: Basia
-  title: MyAnnouncement
-  content: Announcement
