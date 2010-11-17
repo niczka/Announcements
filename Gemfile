@@ -14,7 +14,10 @@ gem 'will_paginate'
 
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0.1"
+    gem "rspec-rails", "~> 2.0.1"
+    gem "capybara"
+    gem "launchy"
+
 end
 
 gem "autotest"

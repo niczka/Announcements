@@ -1,0 +1,33 @@
+require 'integration_test_helper' 
+
+class HomeTest < ActionController::IntegrationTest
+
+  test "viewing home site" do
+    visit '/'
+    assert page.has_content?('Announcements')
+  end
+
+  test "adding an announcement" do
+    visit '/'
+    click_link "New Announcement"
+    assert page.has_content?('New announcement')
+    fill_in 'Author', :with => 'Basia'
+    fill_in 'Title', :with => '
+    click 'Create Club'
+    assert page.has_content?('Club was successfully created.')
+    click_link "Back"
+    assert page.has_content?('Listing clubs')
+    assert page.has_content?('Capybara true')
+    assert page.has_no_content?('Capybara false')
+  end
+
+
+end
+# it "can accept solutions" do
+# course = Course.new
+# exercise = mock
+# user = mock
+# course.stub!(:find_exercise).and_return(exercise)
+# exercise.should_receive(:send_solution).with({:content => "linki"}, user)
+#
+# course.send_solution(user, 1, {:content => "linki"}) 25 end 
